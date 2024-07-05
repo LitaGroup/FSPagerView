@@ -104,6 +104,9 @@ open class FSPagerView: UIView,UICollectionViewDataSource,UICollectionViewDelega
         }
     }
     
+    /// 是否仅计算item的偏移 不受缩放的位置偏移(仅处理了type == .liner类型）
+    open var isOnlyOffsetInteritemSpacing: Bool = false
+
     /// The spacing to use between items in the pager view. Default is 0.
     @IBInspectable
     open var interitemSpacing: CGFloat = 0 {
