@@ -495,7 +495,11 @@ open class FSPagerView: UIView,UICollectionViewDataSource,UICollectionViewDelega
         let scrollPosition: UICollectionView.ScrollPosition = self.scrollDirection == .horizontal ? .centeredHorizontally : .centeredVertically
         self.collectionView.selectItem(at: indexPath, animated: animated, scrollPosition: scrollPosition)
     }
-    
+    open func selectItemTo(at index: Int, animated: Bool) {
+        let indexPath = IndexPath(row: index, section: 0)
+        let scrollPosition: UICollectionView.ScrollPosition = self.scrollDirection == .horizontal ? .centeredHorizontally : .centeredVertically
+        self.collectionView.selectItem(at: indexPath, animated: animated, scrollPosition: scrollPosition)
+    }
     /// Deselects the item at the specified index.
     ///
     /// - Parameters:
